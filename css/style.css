@@ -75,11 +75,19 @@ h2 {
 }
 
 /* TARJETAS DE PRODUCTOS */
-#contenedor-productos,
-#contenedor-carrito {
+#contenedor-productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* ✅ 3 columnas */
   gap: 1.5rem;
+}
+
+#contenedor-carrito {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* más flexible */
+  gap: 1.5rem;
+  justify-content: center; /* centra cuando hay menos de 3 */
+  max-width: 1000px; /* opcional: controlás el ancho total */
+  margin: 0 auto;     /* centra el contenedor en la página */
 }
 
 .tarjeta-producto,
