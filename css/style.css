@@ -83,10 +83,10 @@ h2 {
 
 #contenedor-carrito {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* más flexible */
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
   gap: 1.5rem;
   justify-content: center; /* centra cuando hay menos de 3 */
-  max-width: 1000px; /* opcional: controlás el ancho total */
+  width: 1100px; /* opcional: controlás el ancho total */
   margin: 0 auto;     /* centra el contenedor en la página */
 }
 
@@ -97,6 +97,9 @@ h2 {
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 100%;
+  max-width: 370px;
+  align-items: center;
 }
 
 .tarjeta-producto img,
