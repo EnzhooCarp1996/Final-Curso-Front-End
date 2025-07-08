@@ -53,15 +53,15 @@ nav a {
 
 /* MAIN */
 main {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 2rem; 
-  width: 100%; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
   text-align: center;
 }
 
 .titulo {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
@@ -85,9 +85,12 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, auto));
   gap: 1.5rem;
-  justify-content: center; /* centra cuando hay menos de 3 */
-  width: 1100px; /* opcional: controlás el ancho total */
-  margin: 0 auto;     /* centra el contenedor en la página */
+  justify-content: center;
+  max-width: 1200px; /* ✔ igual que el <main> */
+  width: 100%; /* ✔ ocupa todo el ancho permitido */
+  margin: 0 auto; /* ✔ centrado horizontal */
+  box-sizing: border-box;
+  padding: 0 1rem; /* ✔ para evitar que se pegue a los bordes en pantallas chicas */
 }
 
 .tarjeta-producto,
@@ -196,6 +199,15 @@ footer {
   nav ul {
     flex-direction: column;
     align-items: center;
+  }
+
+  #contenedor-productos {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+  }
+
+  #contenedor-carrito {
+    width: 95%;
+    grid-template-columns: 1fr;
   }
 
   .tarjeta-producto img,
